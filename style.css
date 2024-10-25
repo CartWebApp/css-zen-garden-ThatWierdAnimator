@@ -33,6 +33,10 @@ body::before {
     z-index: -1;
 }
 
+a {
+    color: #ff6464;
+}
+
 .intro {
     position: relative;
     display: flex;
@@ -47,17 +51,39 @@ body::before {
     font-size: 96px;
 }
 
+/* inserts flower image */
 .intro [role=banner] h1::after {
     position: absolute;
     transform: translate(-50%, 125px);
     left: 50%;
     margin-left: -5px;
+
     background-image: url(images/AnselFlower.jpg);
+    background-position: center;
+    background-size: cover;
+
+    filter: sepia(60%) opacity(80%);
+
     content: '';
-    padding: 200px;
+    width: 500px;
+    height: 500px;
+    flex-basis: 500px;
+    flex-basis: 500px;
+    outline: 5px solid black;
+    outline-offset: 5px;
 }
 
 .intro [role=banner] h2 {
-    padding-top: 350px;
+    padding-top: 450px;
+    margin-bottom: 0;
     font-size: 64px;
+}
+
+.intro .summary {
+    font-size: 20px;
+    max-width: 700px;
+}
+
+.intro .summary :last-child {
+    font-size: 16px;
 }
