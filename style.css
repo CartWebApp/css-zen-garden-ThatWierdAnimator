@@ -1,1 +1,63 @@
 /* Empty file for template. Remember to edit only this file and not the HTML file */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* applies font to all items */
+* {
+    font-family: "Libre Bodoni", serif;
+}
+
+/* background color and outside line */
+:root {
+    background-color: #FFFAED;
+    margin: 10px;
+    border: 5px solid black;
+}
+
+/* inside line */
+body {
+    margin: 5px;
+    border: 10px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* the detail at the top of the page */
+body::before {
+    align-self: center;
+    position: absolute;
+    background-color: #ff6464;
+    content: '';
+    padding: 120px;
+    rotate: 45deg;
+    transform: translate(-120px, -120px);
+    z-index: -1;
+}
+
+.intro {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.intro [role=banner] h1 {
+    font-style: italic;
+    font-size: 96px;
+}
+
+.intro [role=banner] h1::after {
+    position: absolute;
+    transform: translate(-50%, 125px);
+    left: 50%;
+    margin-left: -5px;
+    background-image: url(images/AnselFlower.jpg);
+    content: '';
+    padding: 200px;
+}
+
+.intro [role=banner] h2 {
+    padding-top: 350px;
+    font-size: 64px;
+}
