@@ -21,6 +21,11 @@ body {
     flex-direction: column;
 }
 
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
 /* the detail at the top of the page */
 body::before {
     align-self: center;
@@ -51,6 +56,7 @@ a {
     font-size: 96px;
 }
 
+
 /* inserts flower image */
 .intro [role=banner] h1::after {
     position: absolute;
@@ -67,8 +73,6 @@ a {
     content: '';
     width: 500px;
     height: 500px;
-    flex-basis: 500px;
-    flex-basis: 500px;
     outline: 5px solid black;
     outline-offset: 5px;
 }
@@ -86,4 +90,15 @@ a {
 
 .intro .summary :last-child {
     font-size: 16px;
+}
+
+.intro #zen-preamble {
+    background-image: url(images/AnselRiver.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 100%;
+    height: 900px;
+
+    border: 5px solid black;
 }
