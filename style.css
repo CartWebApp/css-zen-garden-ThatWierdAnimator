@@ -38,7 +38,7 @@ body::before {
     z-index: -1;
 }
 
-a {
+body a {
     color: #ff6464;
 }
 
@@ -52,7 +52,7 @@ a {
     order: -2;
 }
 
-.intro [role=banner] h1 {
+.intro [role~=banner] h1 {
     font-style: italic;
     font-size: 96px;
 }
@@ -147,7 +147,7 @@ aside {
 }
 
 aside .wrapper {
-    height: 3000px;
+    height: 1550px;
 
     background-image: url(images/AnselMountains.jpg);
     background-size: cover;
@@ -168,11 +168,12 @@ aside .design-selection h3 {
 }
 
 aside .design-selection ul {
+    z-index: 1;
     list-style: none;
 
     text-align: end;
 
-    margin-top: 90px;
+    margin-top: 80px;
     transform: translateX(-10vw);
 }
 
@@ -212,8 +213,9 @@ aside .design-archives nav li.viewall {
     text-transform: uppercase;
 
     margin-left: 3vw;
+    width: 500px;
 
-    transform: translateY(-200px);
+    transform: translateY(-180px);
 }
 
 aside .zen-resources {
@@ -228,8 +230,13 @@ aside .zen-resources ul {
     list-style: none;
     margin-left: 3vw;
     padding: 0;
+    width: 500px;
 
-    transform: translateY(-200px);
+    transform: translateY(-180px);
+}
+
+aside .zen-resources ul li {
+    width: 500px;
 }
 
 aside .zen-resources a {
@@ -240,3 +247,32 @@ aside .zen-resources a {
 aside .zen-resources a:hover {
     color: #ff6464;
 }
+
+.main.supporting .explanation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    transform: translateY(-700px);
+}
+
+.main.supporting .explanation>h3 {
+    font-size: 64px;
+
+    position: absolute;
+    transform: translate(55vw, -200px);    
+}
+
+.main.supporting .explanation p {
+    font-size: 24px;
+    width: 600px;
+}
+
+.main.supporting .explanation p:nth-child(2) {
+    margin-left: 12.1vw;
+}
+
+.main.supporting .explanation p + p {
+    margin-right: 12.1vw;
+}
+
