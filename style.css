@@ -38,8 +38,17 @@ body::before {
     z-index: -1;
 }
 
-body a {
+body a:link {
     color: #ff6464;
+}
+
+body a:visited {
+    color: rgb(255, 157, 0);
+}
+
+::selection {
+    color: white;
+    background-color: black;
 }
 
 .intro {
@@ -147,7 +156,7 @@ aside {
 }
 
 aside .wrapper {
-    height: 1550px;
+    height: 1000px;
 
     background-image: url(images/AnselMountains.jpg);
     background-size: cover;
@@ -249,11 +258,12 @@ aside .zen-resources a:hover {
 }
 
 .main.supporting .explanation {
+    position: absolute;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
 
-    transform: translateY(-700px);
+    transform: translateY(-400px);
 }
 
 .main.supporting .explanation>h3 {
@@ -273,6 +283,56 @@ aside .zen-resources a:hover {
 }
 
 .main.supporting .explanation p + p {
-    margin-right: 12.1vw;
+    transform: translateX(13.5vw);
 }
 
+[id$='zen-participation'] {
+    height: 1000px;
+    background-image: url(images/AnselSermon.jpg);
+    background-size: cover;
+    background-position: center;
+
+    border: 5px solid black;
+    border-left: none;
+    border-right: none;
+
+    display: flex;
+    flex-direction: column;
+}
+
+[id^='zen-participation'] h3 {
+    margin-left: 7vw;
+
+    font-size: 64px;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+[id*='zen-participation'] p {
+    align-self: flex-end;
+    margin-right: 7vw;
+    transform: translateY(-155px);
+
+    width: 600px;
+    font-size: 24px;
+}
+
+a:active {
+    background-color:rgb(255, 248, 117);
+}
+
+:focus {
+    background-color:rgb(255, 250, 163);
+}
+
+p::first-line {
+    font-style: italic;
+}
+
+[id~='zen-summary'] p:nth-last-child(2)::first-letter {
+    font-style: normal;
+}
+
+[id|='zen-summary'] p:last-of-type {
+    text-transform: capitalize;
+}
