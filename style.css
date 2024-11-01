@@ -202,7 +202,7 @@ aside .design-selection a:hover {
     color: #ff6464;
 }
 
-aside .design-archives ul {
+aside .design-archives ul:only-of-type {
     margin: 0;
     padding: 0;
 }
@@ -215,7 +215,7 @@ aside .design-archives nav li.next {
     display: none;
 }
 
-aside .design-archives nav li.viewall {
+aside .design-archives nav ul:only-child li.viewall {
     list-style: none;
     font-style: italic;
     font-size: 32px;
@@ -315,6 +315,31 @@ aside .zen-resources a:hover {
 
     width: 600px;
     font-size: 24px;
+}
+
+.main.supporting div:nth-of-type(n + 3) {
+    background-color: blue;
+
+    margin-left: 48%;
+}
+
+.main.supporting .benefits h3 {
+    margin-top: 0;
+}
+
+.benefits::before {
+    padding-right: 46.5%;
+    padding-bottom: 1350px;
+    transform: translateX(-100%);
+
+    position: absolute;
+
+    content: '';
+    background-color: red;
+    border: 5px solid black;
+    border-top: none;
+    border-left: none;
+    z-index: -1;
 }
 
 a:active {
