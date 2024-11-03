@@ -173,17 +173,18 @@ aside .design-selection h3 {
     font-size: 64px;
     font-style: italic;
 
-    margin-left: 3vw;
+    margin-left: 10.5%;
 }
 
 aside .design-selection ul {
     z-index: 1;
     list-style: none;
 
+    width: 515px;
     text-align: end;
 
     margin-top: 80px;
-    transform: translateX(-10vw);
+    margin-left: -22%;
 }
 
 aside .design-selection ul li {
@@ -205,6 +206,8 @@ aside .design-selection a:hover {
 aside .design-archives ul:only-of-type {
     margin: 0;
     padding: 0;
+
+    width: 454.5
 }
 
 aside .design-archives h3:first-child {
@@ -221,7 +224,7 @@ aside .design-archives nav ul:only-child li.viewall {
     font-size: 32px;
     text-transform: uppercase;
 
-    margin-left: 3vw;
+    margin-left: 10.5%;
     width: 500px;
 
     transform: translateY(-180px);
@@ -237,7 +240,7 @@ aside .zen-resources h3 {
 
 aside .zen-resources ul {
     list-style: none;
-    margin-left: 3vw;
+    margin-left: 10.5%;
     padding: 0;
     width: 500px;
 
@@ -260,8 +263,11 @@ aside .zen-resources a:hover {
 .main.supporting .explanation {
     position: absolute;
 
+    width: 100vw;
+
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
 
     transform: translateY(-400px);
 }
@@ -269,8 +275,11 @@ aside .zen-resources a:hover {
 .main.supporting .explanation>h3 {
     font-size: 64px;
 
+    text-align: right;
+    width: 80%;
+
     position: absolute;
-    transform: translate(55vw, -200px);    
+    transform: translateY(-200px);    
 }
 
 .main.supporting .explanation p {
@@ -279,11 +288,13 @@ aside .zen-resources a:hover {
 }
 
 .main.supporting .explanation p:nth-child(2) {
-    margin-left: 12.1vw;
+    margin-left: 100px;
+    margin-right: 30px;
 }
 
 .main.supporting .explanation p + p {
-    transform: translateX(13.5vw);
+    margin-right: 100px;
+    margin-left: 30px;
 }
 
 [id$='zen-participation'] {
@@ -318,24 +329,94 @@ aside .zen-resources a:hover {
 }
 
 .main.supporting div:nth-of-type(n + 3) {
-    background-color: blue;
-
     margin-left: 48%;
+
+    border-bottom: 5px solid black;
 }
 
-.main.supporting .benefits h3 {
+.benefits {
+    height: 350px;
+}
+
+.main.supporting div:nth-of-type(n+3) h3 {
     margin-top: 0;
+    transform: translateY(35px);
+
+    text-align: center;
+
+    font-style: italic;
+    font-size: 64px;
+    text-transform: uppercase;
+}
+
+.main.supporting div:nth-of-type(n+3) h3 ~ p {
+    margin: 0 50px 24.25px 50px;
+
+    font-size: 24px;
+}
+
+.requirements p:last-of-type {
+    text-align: center;
+    font-size: 16px !important;
+
+    transform: translate(-50%, 67.5px);
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+
+    margin: 50px 500px;
+
+    height: 400px;
+}
+
+footer [href] {
+    color: black !important;
+    font-size: 24px;
+
+    transform: translateY(15px);
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+
+    padding: 150px;
+    background-image: url(images/Ansel.jpg);
+    background-size: cover;
+
+    outline: 5px solid black;
+    outline-offset: 5px;
+
+    transform: translate(-150%, 100px);
+}
+
+footer::before {
+    z-index: 3;
+    position: absolute;
+
+    width: 750px;
+    height: 300px;
+
+    font-size: 24px;
+
+    transform: translate(40%, 175px);
+
+    content: 'All images on this page were taken by Ansel Adams, who is known for his black-and-white images of the American West. Adams was a life-long advocate for environmental conservation, and his photography is deeply rooted in his advocacy. He died in 1984 from cardiovascular disease, and his legacy lives on to this day.';
 }
 
 .benefits::before {
     padding-right: 46.5%;
-    padding-bottom: 1350px;
+    padding-bottom: 1300px;
     transform: translateX(-100%);
 
     position: absolute;
 
     content: '';
-    background-color: red;
+    background-image: url(images/AnselMoon.jpg);
+    background-position: cover;
+    background-attachment: fixed;
     border: 5px solid black;
     border-top: none;
     border-left: none;
@@ -358,6 +439,11 @@ p::first-line {
     font-style: normal;
 }
 
-[id|='zen-summary'] p:last-of-type {
+[id|='zen-summary'] p:nth-last-of-type(1) {
     text-transform: capitalize;
+}
+
+div:empty {
+    background-color: purple;
+    display: none;
 }
